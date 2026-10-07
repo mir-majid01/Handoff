@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "platforms": {
+    "claude": {
+      "displayName": "Claude",
+      "urlPatterns": [
+        "^https?://(www\\.)?claude\\.ai/share/",
+        "^https?://(www\\.)?claude\\.ai/s/",
+        "^https?://(www\\.)?claude\\.site/s/"
+      ],
+      "static": {
+        "scripts": [
+          {
+            "id": "__NEXT_DATA__",
+            "paths": [["props", "pageProps", "chat_messages"]],
+            "parser": "deep_search"
+          },
+          {
+            "attrName": "type",
+            "attrValue": "application/json",
+            "parser": "deep_search"
+          }
+        ],
+        "tryStreamedRsc": true,
+        "timeoutMs": 20000,
+        "retries": 2
+      },
+      "webview": {
+        "readySelector": "main, [class*='conversation'], [class*='font-user-message']",
+        "messageSelector": ".font-claude-message, .font-user-message, [data-test-render-count], [data-message-author-role]",
+        "roleByClass": [
+          { "contains": "font-user-message", "role": "user" },
+          { "contains": "font-claude-message", "role": "assistant" }
+        ],
+        "textSelector": null,
+        "scrollForLazy": true,
+        "stabilityPolls": 3,
+        "pollIntervalMs": 500,
+        "maxWaitMs": 25000
+      }
+    },
+    "chatgpt": {
+      "displayName": "ChatGPT",
+      "urlPatterns": [
+        "^https?://(www\\.)?chatgpt\\.com/share/",
+        "^https?://(www\\.)?chat\\.openai\\.com/share/"
+      ],
+      "static": {
+        "scripts": [
+          {
+            "id": "__NEXT_DATA__",
+            "paths": [["props", "pageProps", "serverResponse", "data", "mapping"]],
+            "parser": "chatgpt_mapping"
+          },
+          {
+            "attrName": "type",
+            "attrValue": "application/json",
+            "parser": "deep_search"
+          }
+        ],
+        "tryStreamedRsc": true,
+        "timeoutMs": 20000,
+        "retries": 2
+      },
+      "webview": {
+        "readySelector": "main, article, [data-message-author-role]",
+        "messageSelector": "[data-message-author-role], [data-testid^='conversation-turn']",
+        "roleAttr": "data-message-author-role",
+        "textSelector": ".markdown",
+        "scrollForLazy": true,
+        "stabilityPolls": 3,
+        "pollIntervalMs": 500,
+        "maxWaitMs": 30000
+      }
+    },
+    "gemini": {
+      "displayName": "Gemini",
+      "urlPatterns": [
+        "^https?://(www\\.)?gemini\\.google\\.com/share/",
+        "^https?://(www\\.)?bard\\.google\\.com/share/",
+        "^https?://g\\.co/gemini/share/",
+        "^https?://share\\.gemini\\.google/"
+      ],
+      "static": {
+        "scripts": [
+          {
+            "attrName": "type",
+            "attrValue": "application/json",
+            "parser": "deep_search"
+          }
+        ],
+        "tryStreamedRsc": false,
+        "timeoutMs": 20000,
+        "retries": 1
+      },
+      "webview": {
+        "readySelector": "user-query, response-container, main",
+        "messageSelector": "user-query, response-container",
+        "roleByClass": [
+          { "contains": "user-query", "role": "user" },
+          { "contains": "response-container", "role": "assistant" }
+        ],
+        "textSelector": ".query-content, .response-container-content, .markdown",
+        "scrollForLazy": true,
+        "stabilityPolls": 3,
+        "pollIntervalMs": 600,
+        "maxWaitMs": 30000
+      }
+    },
+    "kimi": {
+      "displayName": "Kimi",
+      "urlPatterns": [
+        "^https?://(www\\.)?kimi\\.ai/share/",
+        "^https?://(www\\.)?kimi\\.com/share/"
+      ],
+      "static": {
+        "scripts": [
+          {
+            "attrName": "type",
+            "attrValue": "application/json",
+            "parser": "deep_search"
+          }
+        ],
+        "tryStreamedRsc": false,
+        "timeoutMs": 20000,
+        "retries": 1
+      },
+      "webview": {
+        "readySelector": "[class*='message'], main",
+        "messageSelector": "[class*='user-message'], [class*='assistant-message']",
+        "roleByClass": [
+          { "contains": "user-message", "role": "user" },
+          { "contains": "assistant-message", "role": "assistant" }
+        ],
+        "textSelector": null,
+        "scrollForLazy": true,
+        "stabilityPolls": 3,
+        "pollIntervalMs": 600,
+        "maxWaitMs": 30000
+      }
+    },
+    "deepseek": {
+      "displayName": "DeepSeek",
+      "urlPatterns": [
+        "^https?://chat\\.deepseek\\.com/share/"
+      ],
+      "webview": {
+        "readySelector": ".ds-message, main",
+        "messageSelector": ".ds-message > div:not([class*='ds-assistant']), .ds-assistant-message-main-content",
+        "roleByClass": [
+          { "contains": "ds-assistant-message", "role": "assistant" }
+        ],
+        "defaultRole": "user",
+        "textSelector": null,
+        "scrollForLazy": true,
+        "stabilityPolls": 3,
+        "pollIntervalMs": 600,
+        "maxWaitMs": 30000
+      }
+    },
+    "qwen": {
+      "displayName": "Qwen",
+      "urlPatterns": [
+        "^https?://chat\\.qwen\\.ai/s/",
+        "^https?://chat\\.qwen\\.ai/share/"
+      ],
+      "webview": {
+        "readySelector": ".qwen-chat-message, main",
+        "messageSelector": ".qwen-chat-message-user, .qwen-chat-message-assistant",
+        "roleByClass": [
+          { "contains": "message-user", "role": "user" },
+          { "contains": "message-assistant", "role": "assistant" }
+        ],
+        "textSelector": null,
+        "scrollForLazy": true,
+        "stabilityPolls": 3,
+        "pollIntervalMs": 600,
+        "maxWaitMs": 30000
+      }
+    }
+  }
+}

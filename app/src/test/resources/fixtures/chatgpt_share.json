@@ -1,0 +1,50 @@
+{
+  "props": {
+    "pageProps": {
+      "serverResponse": {
+        "data": {
+          "title": "Quicksort explainer",
+          "mapping": {
+            "root": {
+              "id": "root",
+              "message": null,
+              "parent": null,
+              "children": ["aaa"]
+            },
+            "aaa": {
+              "id": "aaa",
+              "message": {
+                "author": { "role": "user" },
+                "content": { "content_type": "text", "parts": ["Explain quicksort briefly and give me Python code."] }
+              },
+              "parent": "root",
+              "children": ["bbb"]
+            },
+            "bbb": {
+              "id": "bbb",
+              "message": {
+                "author": { "role": "assistant" },
+                "content": {
+                  "content_type": "text",
+                  "parts": [
+                    "Quicksort picks a pivot, partitions the array around it, then recurses on both sides.",
+                    "",
+                    "```python",
+                    "def quicksort(a):",
+                    "    if len(a) <= 1: return a",
+                    "    p, rest = a[0], a[1:]",
+                    "    return quicksort([x for x in rest if x < p]) + [p] + quicksort([x for x in rest if x >= p])",
+                    "```"
+                  ]
+                }
+              },
+              "parent": "aaa",
+              "children": []
+            }
+          },
+          "current_node": "bbb"
+        }
+      }
+    }
+  }
+}

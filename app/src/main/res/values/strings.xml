@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Handoff</string>
+
+    <!-- Home -->
+    <string name="home_tagline">Paste a share link to begin.</string>
+    <string name="home_input_hint">Paste a Claude, ChatGPT or Gemini link</string>
+    <string name="home_paste">Paste</string>
+    <string name="home_go">Continue</string>
+    <string name="home_clipboard_banner">Your clipboard has a %1$s link.</string>
+    <string name="home_clipboard_cta">Use it</string>
+    <string name="home_recent_title">Recent handoffs</string>
+    <string name="home_invalid_link">That doesn\'t look like a share link.</string>
+    <string name="home_empty_recent">Your handoffs will appear here.</string>
+    <string name="home_empty_tip">Share a chat straight from ChatGPT into Handoff.</string>
+    <string name="home_clear_link">Clear link</string>
+    <string name="home_see_all">See all</string>
+
+    <!-- Fetching -->
+    <string name="fetching_title">Reading your chat</string>
+    <string name="fetching_cancel">Cancel</string>
+    <string name="fetching_stage_connecting">Connecting</string>
+    <string name="fetching_stage_reading">Reading messages</string>
+    <string name="fetching_stage_cleaning">Cleaning</string>
+    <string name="fetching_stage_building">Building prompt</string>
+    <string name="fetching_failed_title">Couldn\'t read that chat</string>
+    <string name="fetching_retry">Try again</string>
+    <string name="fetching_paste_manually">Paste manually</string>
+    <string name="fetching_back">Back</string>
+
+    <!-- Preview -->
+    <string name="preview_title">Preview</string>
+    <string name="preview_search_hint">Search messages</string>
+    <string name="preview_token_estimate">≈ %1$s tokens</string>
+    <string name="preview_collapse_code">Code collapsed</string>
+    <string name="preview_expand_code">Code expanded</string>
+    <string name="preview_empty">No messages matched.</string>
+    <string name="preview_you">You</string>
+    <plurals name="preview_selected_count">
+        <item quantity="one">%1$d of %2$d selected</item>
+        <item quantity="other">%1$d of %2$d selected</item>
+    </plurals>
+    <string name="preview_continue_count">Continue (%1$d)</string>
+
+    <plurals name="preview_messages_count">
+        <item quantity="one">%1$d message</item>
+        <item quantity="other">%1$d messages</item>
+    </plurals>
+    <plurals name="preview_excluded_count">
+        <item quantity="one">%1$d hidden</item>
+        <item quantity="other">%1$d hidden</item>
+    </plurals>
+
+    <!-- Export -->
+    <string name="export_title">Export</string>
+    <string name="export_mode_label">Prompt style</string>
+    <string name="export_target_label">Going to</string>
+    <string name="export_copy">Copy prompt</string>
+    <string name="export_save_txt">Save .txt</string>
+    <string name="export_save_pdf">Save PDF</string>
+    <string name="export_share">Share</string>
+    <string name="export_copied">Prompt copied</string>
+    <string name="export_saved">Saved</string>
+    <string name="export_tokens">≈ %1$s tokens</string>
+    <string name="export_limit_label">Context limit</string>
+    <string name="export_helper_target">Adds the right preamble for the assistant you paste into.</string>
+    <string name="export_helper_limit">Long chats are split into numbered parts above this limit.</string>
+    <string name="export_instructions_extra">+%1$s instructions</string>
+    <string name="export_progress">%1$s / %2$s</string>
+    <string name="export_no_limit">No limit</string>
+    <string name="export_split_suggestion">Over the limit — split into parts</string>
+    <string name="export_preview_prompt">Preview prompt</string>
+    <string name="export_show_more">Show more</string>
+    <string name="export_show_less">Show less</string>
+
+    <plurals name="export_split_banner">
+        <item quantity="one">Large chat — it will arrive in %1$d labeled part.</item>
+        <item quantity="other">Large chat — it will arrive in %1$d labeled parts.</item>
+    </plurals>
+
+    <!-- History -->
+    <string name="history_title">History</string>
+    <string name="history_empty">No handoffs yet</string>
+    <string name="history_empty_caption">Paste a share link to start building your library.</string>
+    <string name="history_empty_cta">Paste a link</string>
+    <string name="history_search_hint">Search handoffs</string>
+    <string name="history_deleted">Deleted</string>
+    <string name="history_undo">Undo</string>
+    <string name="history_no_results">No results</string>
+    <string name="history_no_results_caption">Nothing matches your search or filter.</string>
+    <string name="history_group_today">Today</string>
+    <string name="history_group_yesterday">Yesterday</string>
+    <string name="history_group_earlier">Earlier</string>
+    <string name="history_filter_all">All</string>
+    <string name="history_menu">More options</string>
+    <string name="history_action_copy">Copy prompt</string>
+    <string name="history_action_share">Share</string>
+    <string name="history_action_delete">Delete</string>
+    <string name="history_copied">Prompt copied</string>
+
+    <!-- Manual paste -->
+    <string name="manual_title">Paste the chat</string>
+    <string name="manual_open">Link failed? Paste the chat instead</string>
+    <string name="manual_hint">Paste the conversation text. Lines like “You:” and “Assistant:” are detected automatically.</string>
+    <string name="manual_build">Build prompt</string>
+    <string name="manual_empty">Paste at least a few lines first.</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_theme_system">System</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_default_mode">Default prompt style</string>
+    <string name="settings_default_target">Default target AI</string>
+    <string name="settings_token_limit">Context limit</string>
+    <string name="settings_haptics">Haptics</string>
+    <string name="settings_haptics_caption">Subtle vibration on taps and copies</string>
+    <string name="settings_clear_history">Clear history</string>
+    <string name="settings_clear_confirm_title">Clear all history?</string>
+    <string name="settings_clear_confirm_body">Every saved handoff will be removed from this device. This can\'t be undone.</string>
+    <string name="settings_clear_confirm_yes">Clear</string>
+    <string name="settings_cancel">Cancel</string>
+    <string name="settings_about_title">About</string>
+    <string name="settings_about_body">Handoff turns a shared Claude, ChatGPT or Gemini link into a ready-to-paste prompt for any other AI. Everything stays on your device: no accounts, no analytics, no server.</string>
+    <string name="settings_version">Version %1$s</string>
+    <string name="settings_developer">Developed by Mir Majid</string>
+    <string name="settings_github">github.com/editsu4k-coder</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_start">Get started</string>
+    <string name="onboarding_1_title">Paste a link</string>
+    <string name="onboarding_1_body">Grab a share link from Claude, ChatGPT or Gemini and drop it here.</string>
+    <string name="onboarding_2_title">We read it</string>
+    <string name="onboarding_2_body">Handoff pulls the whole conversation — messages, code blocks and all — right on your phone.</string>
+    <string name="onboarding_3_title">Copy to any AI</string>
+    <string name="onboarding_3_body">Get a clean, ready-to-paste prompt that gives any other assistant the full context.</string>
+
+    <!-- Share -->
+    <string name="share_intent_title">Share prompt via</string>
+    <string name="cd_back">Back</string>
+    <string name="cd_settings">Settings</string>
+    <string name="cd_history">History</string>
+    <string name="cd_search">Search</string>
+    <string name="cd_clear_search">Clear search</string>
+    <string name="cd_delete">Delete</string>
+    <string name="cd_export">Export</string>
+    <string name="cd_exclude_message">Exclude this message</string>
+    <string name="cd_include_message">Include this message</string>
+</resources>

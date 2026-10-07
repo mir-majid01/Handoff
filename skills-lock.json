@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "figma-design-to-code": {
+      "source": "figma/mcp-server-guide",
+      "sourceType": "github",
+      "skillPath": "skills/figma-design-to-code/SKILL.md",
+      "computedHash": "6676accbe84e37deee2910458c5fa5908e1809d0adc3d3e19a74ba40da4c3efa"
+    },
+    "figma-generate-design": {
+      "source": "figma/mcp-server-guide",
+      "sourceType": "github",
+      "skillPath": "skills/figma-generate-design/SKILL.md",
+      "computedHash": "cd66597457031ab5591d3c69630b779366423561d3321fd66cb504312c4ae361"
+    },
+    "figma-implement-motion": {
+      "source": "figma/mcp-server-guide",
+      "sourceType": "github",
+      "skillPath": "skills/figma-implement-motion/SKILL.md",
+      "computedHash": "8cc1122a4dee776a240eb2678253a0d9e87390c7dfc4c8fda22589899ca472af"
+    },
+    "figma-use": {
+      "source": "figma/mcp-server-guide",
+      "sourceType": "github",
+      "skillPath": "skills/figma-use/SKILL.md",
+      "computedHash": "ce6c06d0075968aa6062db47085356e95002ec70c14c2a0e08b2b865ee1e08cb"
+    },
+    "figma-use-motion": {
+      "source": "figma/mcp-server-guide",
+      "sourceType": "github",
+      "skillPath": "skills/figma-use-motion/SKILL.md",
+      "computedHash": "600529f5daf5401ca02490bebc78d403302a61691ca81e1a62a4737bd25b4867"
+    }
+  }
+}

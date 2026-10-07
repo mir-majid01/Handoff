@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Back bubble: light sage, tail bottom-left -->
+    <path
+        android:fillColor="#8FB5A0"
+        android:pathData="M39,37 L53,37 A9,9 0 0 1 62,46 L62,53 A9,9 0 0 1 53,62 L45,62 L36,71 L39,62 A9,9 0 0 1 30,53 L30,46 A9,9 0 0 1 39,37 Z" />
+
+    <!-- Baton: deep forest capsule tilted between the bubbles -->
+    <path
+        android:strokeColor="#37503F"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M57,61 L66,52" />
+
+    <!-- Front bubble: deep sage, tail bottom-right -->
+    <path
+        android:fillColor="#58796A"
+        android:pathData="M64,50 L74,50 A8,8 0 0 1 82,58 L82,64 A8,8 0 0 1 74,72 L70,72 L76,80 L62,72 L64,72 L64,72 A8,8 0 0 1 56,64 L56,58 A8,8 0 0 1 64,50 Z" />
+</vector>

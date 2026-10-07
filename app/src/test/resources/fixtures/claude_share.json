@@ -1,0 +1,34 @@
+{
+  "props": {
+    "pageProps": {
+      "chat_title": "Sourdough starter help",
+      "chat_messages": [
+        {
+          "sender": "human",
+          "content": [
+            { "type": "text", "text": "How do I make a sourdough starter from scratch?" }
+          ]
+        },
+        {
+          "sender": "assistant",
+          "content": [
+            { "type": "text", "text": "Mix equal weights of flour and water and leave the jar at room temperature." },
+            { "type": "text", "text": "Feed it daily with 50g flour and 50g water." }
+          ]
+        },
+        {
+          "sender": "human",
+          "content": [
+            { "type": "text", "text": "My starter smells like nail polish. Is it dead?" }
+          ]
+        },
+        {
+          "sender": "assistant",
+          "content": [
+            { "type": "text", "text": "That smell means it is hungry, not dead. Feed it more often." }
+          ]
+        }
+      ]
+    }
+  }
+}

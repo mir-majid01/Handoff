@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- Deliberate pins: versions are verified-stable for this toolchain (see DECISIONS.md).
+         Upgrade advisories are noise, not defects. -->
+    <issue id="AndroidGradlePluginVersion" severity="ignore" />
+    <issue id="GradleDependency" severity="ignore" />
+    <issue id="OldTargetApi" severity="ignore" />
+    <!-- minSdk is 26, so the v26 suffix is redundant — but plain mipmap-anydpi
+         is not resolved by AAPT2 reliably, so the suffix stays. -->
+    <issue id="ObsoleteSdkInt" severity="ignore" />
+</lint>
